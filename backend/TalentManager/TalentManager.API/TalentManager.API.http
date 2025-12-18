@@ -1,0 +1,6 @@
+@TalentManager.API_HostAddress = http://localhost:5022
+
+GET {{TalentManager.API_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
