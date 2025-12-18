@@ -1,0 +1,6 @@
+<Solution>
+  <Project Path="TalentManager.API/TalentManager.API.csproj" />
+  <Project Path="TalentManager.Common/TalentManager.Common.csproj" />
+  <Project Path="TalentManager.Data/TalentManager.Data.csproj" />
+  <Project Path="TalentManager.Tests/TalentManager.Tests.csproj" />
+</Solution>
