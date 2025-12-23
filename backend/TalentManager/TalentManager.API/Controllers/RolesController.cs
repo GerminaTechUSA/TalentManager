@@ -45,7 +45,7 @@ namespace TalentManager.API.Controllers
             if (dto.Id != 0 && dto.Id != id)
                 return BadRequest("Body ID and route ID must match.");
 
-            var success = await _rolesService.UpdateAsync(id, dto, userName: "system");
+            var success = await _rolesService.UpdateAsync(id, dto);
             if (!success)
                 return NotFound();
 
