@@ -49,3 +49,5 @@ __screenshots__/
 project.lock.json
 project.fragment.lock.json
 artifacts/
+**/obj/
+**/bin/
