@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\mariarosa-ieg\\TalentManager\\backend\\TalentManager\\TalentManager.API\\TalentManager.API.csproj": {}
+    "C:\\Users\\gustavopm-ieg\\TalentManager\\backend\\TalentManager\\TalentManager.API\\TalentManager.API.csproj": {}
   },
   "projects": {
-    "C:\\Users\\mariarosa-ieg\\TalentManager\\backend\\TalentManager\\TalentManager.API\\TalentManager.API.csproj": {
+    "C:\\Users\\gustavopm-ieg\\TalentManager\\backend\\TalentManager\\TalentManager.API\\TalentManager.API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\mariarosa-ieg\\TalentManager\\backend\\TalentManager\\TalentManager.API\\TalentManager.API.csproj",
+        "projectUniqueName": "C:\\Users\\gustavopm-ieg\\TalentManager\\backend\\TalentManager\\TalentManager.API\\TalentManager.API.csproj",
         "projectName": "TalentManager.API",
-        "projectPath": "C:\\Users\\mariarosa-ieg\\TalentManager\\backend\\TalentManager\\TalentManager.API\\TalentManager.API.csproj",
-        "packagesPath": "C:\\Users\\mariarosa-ieg\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\mariarosa-ieg\\TalentManager\\backend\\TalentManager\\TalentManager.API\\obj\\",
+        "projectPath": "C:\\Users\\gustavopm-ieg\\TalentManager\\backend\\TalentManager\\TalentManager.API\\TalentManager.API.csproj",
+        "packagesPath": "C:\\Users\\gustavopm-ieg\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\gustavopm-ieg\\TalentManager\\backend\\TalentManager\\TalentManager.API\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\mariarosa-ieg\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\gustavopm-ieg\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -32,11 +32,11 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\mariarosa-ieg\\TalentManager\\backend\\TalentManager\\TalentManager.Common\\TalentManager.Common.csproj": {
-                "projectPath": "C:\\Users\\mariarosa-ieg\\TalentManager\\backend\\TalentManager\\TalentManager.Common\\TalentManager.Common.csproj"
+              "C:\\Users\\gustavopm-ieg\\TalentManager\\backend\\TalentManager\\TalentManager.Common\\TalentManager.Common.csproj": {
+                "projectPath": "C:\\Users\\gustavopm-ieg\\TalentManager\\backend\\TalentManager\\TalentManager.Common\\TalentManager.Common.csproj"
               },
-              "C:\\Users\\mariarosa-ieg\\TalentManager\\backend\\TalentManager\\TalentManager.Data\\TalentManager.Data.csproj": {
-                "projectPath": "C:\\Users\\mariarosa-ieg\\TalentManager\\backend\\TalentManager\\TalentManager.Data\\TalentManager.Data.csproj"
+              "C:\\Users\\gustavopm-ieg\\TalentManager\\backend\\TalentManager\\TalentManager.Data\\TalentManager.Data.csproj": {
+                "projectPath": "C:\\Users\\gustavopm-ieg\\TalentManager\\backend\\TalentManager\\TalentManager.Data\\TalentManager.Data.csproj"
               }
             }
           }
@@ -81,24 +81,24 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.100/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.101/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\mariarosa-ieg\\TalentManager\\backend\\TalentManager\\TalentManager.Common\\TalentManager.Common.csproj": {
+    "C:\\Users\\gustavopm-ieg\\TalentManager\\backend\\TalentManager\\TalentManager.Common\\TalentManager.Common.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\mariarosa-ieg\\TalentManager\\backend\\TalentManager\\TalentManager.Common\\TalentManager.Common.csproj",
+        "projectUniqueName": "C:\\Users\\gustavopm-ieg\\TalentManager\\backend\\TalentManager\\TalentManager.Common\\TalentManager.Common.csproj",
         "projectName": "TalentManager.Common",
-        "projectPath": "C:\\Users\\mariarosa-ieg\\TalentManager\\backend\\TalentManager\\TalentManager.Common\\TalentManager.Common.csproj",
-        "packagesPath": "C:\\Users\\mariarosa-ieg\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\mariarosa-ieg\\TalentManager\\backend\\TalentManager\\TalentManager.Common\\obj\\",
+        "projectPath": "C:\\Users\\gustavopm-ieg\\TalentManager\\backend\\TalentManager\\TalentManager.Common\\TalentManager.Common.csproj",
+        "packagesPath": "C:\\Users\\gustavopm-ieg\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\gustavopm-ieg\\TalentManager\\backend\\TalentManager\\TalentManager.Common\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\mariarosa-ieg\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\gustavopm-ieg\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -113,8 +113,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\mariarosa-ieg\\TalentManager\\backend\\TalentManager\\TalentManager.Data\\TalentManager.Data.csproj": {
-                "projectPath": "C:\\Users\\mariarosa-ieg\\TalentManager\\backend\\TalentManager\\TalentManager.Data\\TalentManager.Data.csproj"
+              "C:\\Users\\gustavopm-ieg\\TalentManager\\backend\\TalentManager\\TalentManager.Data\\TalentManager.Data.csproj": {
+                "projectPath": "C:\\Users\\gustavopm-ieg\\TalentManager\\backend\\TalentManager\\TalentManager.Data\\TalentManager.Data.csproj"
               }
             }
           }
@@ -150,24 +150,24 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.100/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.101/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\mariarosa-ieg\\TalentManager\\backend\\TalentManager\\TalentManager.Data\\TalentManager.Data.csproj": {
+    "C:\\Users\\gustavopm-ieg\\TalentManager\\backend\\TalentManager\\TalentManager.Data\\TalentManager.Data.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\mariarosa-ieg\\TalentManager\\backend\\TalentManager\\TalentManager.Data\\TalentManager.Data.csproj",
+        "projectUniqueName": "C:\\Users\\gustavopm-ieg\\TalentManager\\backend\\TalentManager\\TalentManager.Data\\TalentManager.Data.csproj",
         "projectName": "TalentManager.Data",
-        "projectPath": "C:\\Users\\mariarosa-ieg\\TalentManager\\backend\\TalentManager\\TalentManager.Data\\TalentManager.Data.csproj",
-        "packagesPath": "C:\\Users\\mariarosa-ieg\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\mariarosa-ieg\\TalentManager\\backend\\TalentManager\\TalentManager.Data\\obj\\",
+        "projectPath": "C:\\Users\\gustavopm-ieg\\TalentManager\\backend\\TalentManager\\TalentManager.Data\\TalentManager.Data.csproj",
+        "packagesPath": "C:\\Users\\gustavopm-ieg\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\gustavopm-ieg\\TalentManager\\backend\\TalentManager\\TalentManager.Data\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\mariarosa-ieg\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\gustavopm-ieg\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -211,6 +211,16 @@
             "Microsoft.EntityFrameworkCore.Relational": {
               "target": "Package",
               "version": "[9.0.2, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[9.0.2, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[9.0.2, )"
             }
           },
           "imports": [
@@ -229,7 +239,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.100/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.101/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

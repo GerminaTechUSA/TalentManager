@@ -1,5 +1,23 @@
+using Microsoft.EntityFrameworkCore;
+using TalentManager.Common.Interfaces;
+using TalentManager.Common.Services;
+using TalentManager.Data;
+
 var builder = WebApplication.CreateBuilder(args);
 
+
+// DbContext
+builder.Services.AddDbContext<AppDbContext>(options =>
+    options.UseSqlServer(
+        builder.Configuration.GetConnectionString("DefaultConnection")));
+
+// Services
+builder.Services.AddScoped<IRolesService, RolesService>();
+
+// Controllers + Swagger
+builder.Services.AddControllers();
+builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddSwaggerGen();
 // Add services to the container.
 
 builder.Services.AddControllers();
