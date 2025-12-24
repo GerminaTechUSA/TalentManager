@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("TalentManager.Tests")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b710786e254218358d3478477e2c86296b843662")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ce9f8485fcb862e37da82b2c94a1a4d9d4f34bd4")]
 [assembly: System.Reflection.AssemblyProductAttribute("TalentManager.Tests")]
 [assembly: System.Reflection.AssemblyTitleAttribute("TalentManager.Tests")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
