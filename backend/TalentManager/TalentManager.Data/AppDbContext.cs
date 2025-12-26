@@ -6,7 +6,8 @@ namespace TalentManager.Data
 {
     public class AppDbContext : DbContext
     {
-        public AppDbContext(DbContextOptions<AppDbContext> options) : base(options)
+        public AppDbContext(DbContextOptions<AppDbContext> options) 
+            : base(options)
         {
         }
 
@@ -22,19 +23,33 @@ namespace TalentManager.Data
             modelBuilder.Entity<Companies>(entity =>
             {
                 entity.ToTable("Companies");
+
                 entity.HasKey(c => c.Id);
-                entity.Property(c => c.Id).ValueGeneratedOnAdd();
-                entity.Property(c => c.Name).HasMaxLength(60).IsRequired();
+
+                entity.Property(c => c.Id)
+                      .ValueGeneratedOnAdd();
+
+                entity.Property(c => c.Name)
+                      .HasMaxLength(60)
+                      .IsRequired();
             });
 
             // Configuração de Roles (Do colega)
             modelBuilder.Entity<Roles>(entity =>
             {
                 entity.ToTable("Roles");
+
                 entity.HasKey(r => r.Id);
-                entity.Property(c => c.Id).ValueGeneratedOnAdd();
-                entity.Property(c => c.Name).HasMaxLength(60).IsRequired();
-                entity.Property(c => c.Notes).IsRequired(false);
+
+                entity.Property(c => c.Id)
+                      .ValueGeneratedOnAdd();
+
+                entity.Property(c => c.Name)
+                      .HasMaxLength(60)
+                      .IsRequired();
+
+                entity.Property(c => c.Notes)
+                      .IsRequired(false);
             });
         }
     }
