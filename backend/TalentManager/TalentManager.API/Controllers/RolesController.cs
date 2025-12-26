@@ -16,14 +16,14 @@ namespace TalentManager.API.Controllers
 
         // GET: api/role
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<RolesListDTO>>> GetRoles()
+        public async Task<ActionResult<IEnumerable<RolesDTO>>> GetRoles()
         {
             var roles = await _rolesService.GetAllAsync();
             return Ok(roles);
         }
 
         [HttpGet("{id:int}")]
-        public async Task<ActionResult<RolesListDTO>> GetRole(int id)
+        public async Task<ActionResult<RolesDTO>> GetRole(int id)
         {
             var role = await _rolesService.GetByIdAsync(id);
             if (role == null)
@@ -33,19 +33,19 @@ namespace TalentManager.API.Controllers
         }
 
         [HttpPost]
-        public async Task<ActionResult<RolesListDTO>> CreatePerson([FromBody] RolesListDTO dto)
+        public async Task<ActionResult<RolesDTO>> CreateRole([FromBody] RolesDTO dto)
         {
             var created = await _rolesService.CreateAsync(dto, userName: "system");
             return CreatedAtAction(nameof(GetRole), new { id = created.Id }, created);
         }
 
         [HttpPut("{id:int}")]
-        public async Task<IActionResult> UpdateRole(int id, [FromBody] RolesListDTO dto)
+        public async Task<IActionResult> UpdateRole(int id, [FromBody] RolesDTO dto)
         {
             if (dto.Id != 0 && dto.Id != id)
                 return BadRequest("Body ID and route ID must match.");
 
-            var success = await _rolesService.UpdateAsync(id, dto, userName: "system");
+            var success = await _rolesService.UpdateAsync(id, dto);
             if (!success)
                 return NotFound();
 

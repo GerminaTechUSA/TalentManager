@@ -6,12 +6,11 @@ using System.Threading.Tasks;
 
 namespace TalentManager.Common.DTOs
 {
-    public class RolesListDTO
+    public class SoftwaresDTO
     {
         public int Id { get; set; }
 
         public string Name { get; set; } = null!;
 
-        public string? Notes { get; set; }
     }
 }

@@ -6,54 +6,52 @@ using TalentManager.Data.Entities;
 
 namespace TalentManager.Common.Services
 {
-    public class RolesService : IRolesService
+    public class SoftwaresService : ISoftwaresService
     {
         private readonly AppDbContext _context;
 
-        public RolesService(AppDbContext context)
+        public SoftwaresService(AppDbContext context)
         {
             _context = context;
         }
 
-        public async Task<IEnumerable<RolesDTO>> GetAllAsync()
+        public async Task<IEnumerable<SoftwaresDTO>> GetAllAsync()
         {
-            var list = await _context.Roles
-                .OrderBy(r => r.Id)
+            var list = await _context.Softwares
+                .OrderBy(s => s.Id)
                 .ToListAsync();
 
             return list.Select(MapToDto);
         }
 
-        public async Task<RolesDTO?> GetByIdAsync(int id)
+        public async Task<SoftwaresDTO?> GetByIdAsync(int id)
         {
-            var entity = await _context.Roles
-                .FirstOrDefaultAsync(r => r.Id == id);
+            var entity = await _context.Softwares
+                .FirstOrDefaultAsync(s => s.Id == id);
 
             return entity == null ? null : MapToDto(entity);
         }
 
-        public async Task<RolesDTO> CreateAsync(RolesDTO dto, string? userName = "system")
+        public async Task<SoftwaresDTO> CreateAsync(SoftwaresDTO dto)
         {
-            var entity = new Roles
+            var entity = new Softwares()
             {
-                Name = dto.Name,
-                Notes = dto.Notes
+                Name = dto.Name
             };
 
-            _context.Roles.Add(entity);
+            _context.Softwares.Add(entity);
             await _context.SaveChangesAsync();
 
             return MapToDto(entity);
         }
 
-        public async Task<bool> UpdateAsync(int id, RolesDTO dto, string? userName = "system")
+        public async Task<bool> UpdateAsync(int id, SoftwaresDTO dto)
         {
-            var entity = await _context.Roles.FindAsync(id);
+            var entity = await _context.Softwares.FindAsync(id);
             if (entity == null)
                 return false;
 
             entity.Name = dto.Name;
-            entity.Notes = dto.Notes;
 
             await _context.SaveChangesAsync();
             return true;
@@ -62,24 +60,23 @@ namespace TalentManager.Common.Services
 
         public async Task<bool> DeleteAsync(int id)
         {
-            var entity = await _context.Roles.FindAsync(id);
+            var entity = await _context.Softwares.FindAsync(id);
             if (entity == null)
                 return false;
 
-            _context.Roles.Remove(entity);
+            _context.Softwares.Remove(entity);
             await _context.SaveChangesAsync();
             return true;
         }
 
         // ---- Helpers internos ----
 
-        private static RolesDTO MapToDto(Roles r)
+        private static SoftwaresDTO MapToDto(Softwares s)
         {
-            return new RolesDTO()
+            return new SoftwaresDTO()
             {
-                Id = r.Id,
-                Name = r.Name,
-                Notes = r.Notes
+                Id = s.Id,
+                Name = s.Name
             };
         }
     }
