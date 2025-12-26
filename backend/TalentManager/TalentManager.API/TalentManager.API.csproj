@@ -20,10 +20,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Controllers\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\TalentManager.Common\TalentManager.Common.csproj" />
     <ProjectReference Include="..\TalentManager.Data\TalentManager.Data.csproj" />
   </ItemGroup>
