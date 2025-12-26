@@ -4,10 +4,10 @@ namespace TalentManager.Common.Interfaces
 {
     public interface IRolesService
     {
-        Task<IEnumerable<RolesListDTO>> GetAllAsync();
-        Task<RolesListDTO?> GetByIdAsync(int id);
-        Task<RolesListDTO> CreateAsync(RolesListDTO dto, string? userName = null);
-        Task<bool> UpdateAsync(int id, RolesListDTO dto, string? userName = null);
+        Task<IEnumerable<RolesDTO>> GetAllAsync();
+        Task<RolesDTO?> GetByIdAsync(int id);
+        Task<RolesDTO> CreateAsync(RolesDTO dto, string? userName = null);
+        Task<bool> UpdateAsync(int id, RolesDTO dto, string? userName = null);
         Task<bool> DeleteAsync(int id);
     }
 }

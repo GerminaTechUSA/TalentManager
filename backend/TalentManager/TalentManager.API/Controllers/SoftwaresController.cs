@@ -8,24 +8,24 @@ namespace TalentManager.API.Controllers
     [Route("api/[controller]")]
     public class SoftwaresController : ControllerBase
     {
-        private readonly ISoftawaresService _softawaresService;
-        public SoftwaresController(ISoftawaresService softawaresService)
+        private readonly ISoftwaresService _softwaresService;
+        public SoftwaresController(ISoftwaresService softwaresService)
         {
-            _softawaresService = softawaresService;
+            _softwaresService = softwaresService;
         }
 
         // GET: api/role
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<SoftwaresListDTO>>> GetRoles()
+        public async Task<ActionResult<IEnumerable<SoftwaresDTO>>> GetRoles()
         {
-            var softwares = await _softawaresService.GetAllAsync();
+            var softwares = await _softwaresService.GetAllAsync();
             return Ok(softwares);
         }
 
         [HttpGet("{id:int}")]
-        public async Task<ActionResult<SoftwaresListDTO>> GetSoftware(int id)
+        public async Task<ActionResult<SoftwaresDTO>> GetSoftware(int id)
         {
-            var softwares = await _softawaresService.GetByIdAsync(id);
+            var softwares = await _softwaresService.GetByIdAsync(id);
             if (softwares == null)
                 return NotFound();
 
@@ -33,19 +33,19 @@ namespace TalentManager.API.Controllers
         }
 
         [HttpPost]
-        public async Task<ActionResult<SoftwaresListDTO>> CreatePerson([FromBody] SoftwaresListDTO dto)
+        public async Task<ActionResult<SoftwaresDTO>> CreateSoftware([FromBody] SoftwaresDTO dto)
         {
-            var created = await _softawaresService.CreateAsync(dto);
+            var created = await _softwaresService.CreateAsync(dto);
             return CreatedAtAction(nameof(GetSoftware), new { id = created.Id }, created);
         }
 
         [HttpPut("{id:int}")]
-        public async Task<IActionResult> UpdateSoftware(int id, [FromBody] SoftwaresListDTO dto)
+        public async Task<IActionResult> UpdateSoftware(int id, [FromBody] SoftwaresDTO dto)
         {
             if (dto.Id != 0 && dto.Id != id)
                 return BadRequest("Body ID and route ID must match.");
 
-            var success = await _softawaresService.UpdateAsync(id, dto);
+            var success = await _softwaresService.UpdateAsync(id, dto);
             if (!success)
                 return NotFound();
 
@@ -55,7 +55,7 @@ namespace TalentManager.API.Controllers
         [HttpDelete("{id:int}")]
         public async Task<IActionResult> DeleteSoftware(int id)
         {
-            var deleted = await _softawaresService.DeleteAsync(id);
+            var deleted = await _softwaresService.DeleteAsync(id);
             if (!deleted)
                 return NotFound();
 

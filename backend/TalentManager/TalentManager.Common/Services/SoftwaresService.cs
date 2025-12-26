@@ -6,7 +6,7 @@ using TalentManager.Data.Entities;
 
 namespace TalentManager.Common.Services
 {
-    public class SoftwaresService : ISoftawaresService
+    public class SoftwaresService : ISoftwaresService
     {
         private readonly AppDbContext _context;
 
@@ -15,7 +15,7 @@ namespace TalentManager.Common.Services
             _context = context;
         }
 
-        public async Task<IEnumerable<SoftwaresListDTO>> GetAllAsync()
+        public async Task<IEnumerable<SoftwaresDTO>> GetAllAsync()
         {
             var list = await _context.Softwares
                 .OrderBy(s => s.Id)
@@ -24,7 +24,7 @@ namespace TalentManager.Common.Services
             return list.Select(MapToDto);
         }
 
-        public async Task<SoftwaresListDTO?> GetByIdAsync(int id)
+        public async Task<SoftwaresDTO?> GetByIdAsync(int id)
         {
             var entity = await _context.Softwares
                 .FirstOrDefaultAsync(s => s.Id == id);
@@ -32,7 +32,7 @@ namespace TalentManager.Common.Services
             return entity == null ? null : MapToDto(entity);
         }
 
-        public async Task<SoftwaresListDTO> CreateAsync(SoftwaresListDTO dto)
+        public async Task<SoftwaresDTO> CreateAsync(SoftwaresDTO dto)
         {
             var entity = new Softwares()
             {
@@ -45,7 +45,7 @@ namespace TalentManager.Common.Services
             return MapToDto(entity);
         }
 
-        public async Task<bool> UpdateAsync(int id, SoftwaresListDTO dto)
+        public async Task<bool> UpdateAsync(int id, SoftwaresDTO dto)
         {
             var entity = await _context.Softwares.FindAsync(id);
             if (entity == null)
@@ -71,9 +71,9 @@ namespace TalentManager.Common.Services
 
         // ---- Helpers internos ----
 
-        private static SoftwaresListDTO MapToDto(Softwares s)
+        private static SoftwaresDTO MapToDto(Softwares s)
         {
-            return new SoftwaresListDTO()
+            return new SoftwaresDTO()
             {
                 Id = s.Id,
                 Name = s.Name

@@ -15,7 +15,7 @@ namespace TalentManager.Common.Services
             _context = context;
         }
 
-        public async Task<IEnumerable<RolesListDTO>> GetAllAsync()
+        public async Task<IEnumerable<RolesDTO>> GetAllAsync()
         {
             var list = await _context.Roles
                 .OrderBy(r => r.Id)
@@ -24,7 +24,7 @@ namespace TalentManager.Common.Services
             return list.Select(MapToDto);
         }
 
-        public async Task<RolesListDTO?> GetByIdAsync(int id)
+        public async Task<RolesDTO?> GetByIdAsync(int id)
         {
             var entity = await _context.Roles
                 .FirstOrDefaultAsync(r => r.Id == id);
@@ -32,7 +32,7 @@ namespace TalentManager.Common.Services
             return entity == null ? null : MapToDto(entity);
         }
 
-        public async Task<RolesListDTO> CreateAsync(RolesListDTO dto, string? userName = "system")
+        public async Task<RolesDTO> CreateAsync(RolesDTO dto, string? userName = "system")
         {
             var entity = new Roles
             {
@@ -46,7 +46,7 @@ namespace TalentManager.Common.Services
             return MapToDto(entity);
         }
 
-        public async Task<bool> UpdateAsync(int id, RolesListDTO dto, string? userName = "system")
+        public async Task<bool> UpdateAsync(int id, RolesDTO dto, string? userName = "system")
         {
             var entity = await _context.Roles.FindAsync(id);
             if (entity == null)
@@ -73,9 +73,9 @@ namespace TalentManager.Common.Services
 
         // ---- Helpers internos ----
 
-        private static RolesListDTO MapToDto(Roles r)
+        private static RolesDTO MapToDto(Roles r)
         {
-            return new RolesListDTO()
+            return new RolesDTO()
             {
                 Id = r.Id,
                 Name = r.Name,

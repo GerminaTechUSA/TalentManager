@@ -7,12 +7,12 @@ using TalentManager.Common.DTOs;
 
 namespace TalentManager.Common.Interfaces
 {
-    public interface ISoftawaresService
+    public interface ISoftwaresService
     {
-        Task<IEnumerable<SoftwaresListDTO>> GetAllAsync();
-        Task<SoftwaresListDTO?> GetByIdAsync(int id);
-        Task<SoftwaresListDTO> CreateAsync(SoftwaresListDTO dto);
-        Task<bool> UpdateAsync(int id, SoftwaresListDTO dto);
+        Task<IEnumerable<SoftwaresDTO>> GetAllAsync();
+        Task<SoftwaresDTO?> GetByIdAsync(int id);
+        Task<SoftwaresDTO> CreateAsync(SoftwaresDTO dto);
+        Task<bool> UpdateAsync(int id, SoftwaresDTO dto);
         Task<bool> DeleteAsync(int id);
     }
 }

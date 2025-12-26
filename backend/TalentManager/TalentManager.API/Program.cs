@@ -13,7 +13,8 @@ builder.Services.AddDbContext<AppDbContext>(options =>
 
 // Services
 builder.Services.AddScoped<IRolesService, RolesService>();
-builder.Services.AddScoped<ISoftawaresService, SoftwaresService>();
+builder.Services.AddScoped<ISoftwaresService, SoftwaresService>();
+builder.Services.AddScoped<IModulesService, ModulesService>();
 
 
 // Controllers + Swagger

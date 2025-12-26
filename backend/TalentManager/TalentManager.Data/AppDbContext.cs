@@ -14,6 +14,8 @@ namespace TalentManager.Data
 
         public DbSet<Softwares> Softwares { get; set; } = null!;
 
+        public DbSet<Modules> Modules { get; set; } = null!;
+
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -48,6 +50,36 @@ namespace TalentManager.Data
                 entity.Property(s => s.Name)
                     .HasMaxLength(60)
                     .IsRequired();
+
+            });
+
+            modelBuilder.Entity<Modules>(entity =>
+            {
+                entity.ToTable("Modules");
+
+                entity.HasKey(m => m.Id);
+
+                entity.Property(m => m.Id)
+                    .ValueGeneratedOnAdd();
+
+                entity.Property(m => m.Name)
+                    .HasMaxLength(60)
+                    .IsRequired();
+
+                entity.Property(m => m.SoftwareId)
+                    .IsRequired();
+
+                entity.Property(m => m.Notes)
+                    .IsRequired(false);
+
+                entity.Property(m => m.TargetAudience)
+                    .HasMaxLength(20)
+                    .IsRequired();
+
+                entity.HasOne(m => m.Software)
+                    .WithMany(s => s.Modules)
+                    .HasForeignKey(m => m.SoftwareId)
+                    .HasConstraintName("FK_Modules_Softwares");
 
             });
         }
