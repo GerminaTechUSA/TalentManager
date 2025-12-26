@@ -1,4 +1,33 @@
 using Microsoft.EntityFrameworkCore;
+<<<<<<< HEAD
+using TalentManager.Common.Services;
+using TalentManager.Common.Interfaces;
+using TalentManager.Data;
+using System;
+
+var builder = WebApplication.CreateBuilder(args);
+
+// DbContext
+
+builder.Services.AddDbContext<AppDbContext>(options =>
+
+    options.UseSqlServer(
+
+        builder.Configuration.GetConnectionString("DefaultConnection")));
+
+// Services
+
+builder.Services.AddScoped<ICompaniesService, CompaniesService>();
+
+// Controllers + Swagger
+
+builder.Services.AddControllers();
+
+builder.Services.AddEndpointsApiExplorer();
+
+builder.Services.AddSwaggerGen();
+
+=======
 using TalentManager.Common.Interfaces;
 using TalentManager.Common.Services;
 using TalentManager.Data;
@@ -18,6 +47,7 @@ builder.Services.AddScoped<IRolesService, RolesService>();
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+>>>>>>> 47e473f896f201d34d7c464997a29ac8d96aa3cd
 // Add services to the container.
 
 builder.Services.AddControllers();
@@ -37,6 +67,11 @@ if (app.Environment.IsDevelopment())
 app.UseHttpsRedirection();
 
 app.UseAuthorization();
+
+app.UseCors(builder => builder
+    .AllowAnyOrigin()
+    .AllowAnyMethod()
+    .AllowAnyHeader());
 
 app.MapControllers();
 
